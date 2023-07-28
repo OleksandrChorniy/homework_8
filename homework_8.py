@@ -25,7 +25,7 @@ def get_birthdays_per_week(n):
             if day_of_week in ['Saturday', 'Sunday']:
                 day_of_week = 'Monday'
 
-            if current_day.strftime('%A') == day_of_week:
+            if current_day.strftime('%A') == day_of_week and today <= birthday <= current_day:
                 birthdays[day_of_week].append(name)
 
         if birthdays[current_day.strftime('%A')]:
